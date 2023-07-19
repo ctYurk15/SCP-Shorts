@@ -7,7 +7,7 @@ public class BulletScript : MonoBehaviour
     [Tooltip("Furthest distance bullet will look for target")]
     public float maxDistance = 1000000;
     RaycastHit hit;
-    [Tooltip("Prefab of wall damange hit. The object needs 'LevelPart' tag to create decal on it.")]
+    [Tooltip("Prefab of wall damange hit")]
     public GameObject decalHitWall;
     [Tooltip("Decal will need to be sligtly infront of the wall so it doesnt cause rendeing problems so for best feel put from 0.01-0.1.")]
     public float floatInfrontOfWall;
@@ -32,15 +32,12 @@ public class BulletScript : MonoBehaviour
         {
             if (decalHitWall)
             {
-                if (hit.transform.tag == "LevelPart")
-                {
-                    Instantiate(decalHitWall, hit.point + hit.normal * floatInfrontOfWall, Quaternion.LookRotation(hit.normal));
-                    Destroy(gameObject);
-                }
+                GameObject bullet_damage = Instantiate(decalHitWall, hit.point + hit.normal * floatInfrontOfWall, Quaternion.LookRotation(hit.normal));
+                bullet_damage.transform.SetParent(hit.transform);
+
                 if (hit.transform.tag == "Dummie")
                 {
                     Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                    Destroy(gameObject);
                 }
                 if (hit.transform.GetComponent<Rigidbody>() != null)
                 {
