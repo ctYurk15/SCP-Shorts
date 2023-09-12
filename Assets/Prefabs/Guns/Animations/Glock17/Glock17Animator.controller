@@ -1188,7 +1188,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Character_GunTakeDown
-  m_Speed: -1
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -1200,7 +1200,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 507d9d231e6b6ea45b7863d98afdf2db, type: 2}
+  m_Motion: {fileID: 7400000, guid: f3c55f507b006b149b919f449de641d8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

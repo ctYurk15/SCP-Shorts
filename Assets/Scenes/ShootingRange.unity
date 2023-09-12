@@ -791,11 +791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11414154, guid: c391f12a928274acab8576bb6030641d, type: 3}
       propertyPath: ammo_count.Array.data[0]
-      value: 30
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 11414154, guid: c391f12a928274acab8576bb6030641d, type: 3}
       propertyPath: ammo_count.Array.data[1]
-      value: 10
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 11414154, guid: c391f12a928274acab8576bb6030641d, type: 3}
       propertyPath: ammo_names.Array.data[0]
