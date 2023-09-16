@@ -292,7 +292,7 @@ public class PlayerMovementScript : MonoBehaviour {
 				if (_other.transform.tag == "Dummie") {
 					print ("hit a dummie");
 				}
-				InstantiateBlood(hitInfo,false);
+				InstantiateBlood(hitInfo,false);//
 			}
 		}
 		yield return new WaitForEndOfFrame ();

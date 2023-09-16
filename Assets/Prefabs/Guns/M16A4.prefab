@@ -489,7 +489,7 @@ MonoBehaviour:
   forwardRotationAmount: {x: 1, y: 1}
   bulletSpawnPlace: {fileID: 0}
   bullet: {fileID: 128836, guid: c9e619a669d974fd28b5c89e43f2bce2, type: 3}
-  roundsPerSecond: 10
+  roundsPerSecond: 13
   recoilAmount_z: 0.04
   recoilAmount_x: 0.04
   recoilAmount_y: 0.04
@@ -535,8 +535,11 @@ MonoBehaviour:
   reloadAnimationName: Player_Reload
   aimingAnimationName: Player_AImpose
   meeleAnimationName: Character_Malee
-  shootAnimationName: Player_Shoot
+  shootAnimationName: M16A4Shooting
   shootAnimationTime: 0.25
+  startShootingAnimationName: M16A4ShootStart
+  endShootingAnimationName: M16A4ShootEnd
+  startShootingTime: 0.25
 --- !u!1 &1653378573691142448
 GameObject:
   m_ObjectHideFlags: 0

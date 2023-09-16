@@ -369,27 +369,40 @@ public class GunScript : MonoBehaviour
     [Tooltip("Rounds per second if weapon is set to automatic rafal.")]
     public float roundsPerSecond;
     private float waitTillNextFire;
+
+    private bool isShooting = false;
     /*
 	 * Checking if the gun is automatic or nonautomatic and accordingly runs the ShootMethod();.
 	 */
     void Shooting()
     {
-
-        if (!meeleAttack)
+        if (currentStyle == GunStyles.nonautomatic)
         {
-            if (currentStyle == GunStyles.nonautomatic)
+            if (Input.GetButtonDown("Fire1"))
             {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    ShootMethod();
-                }
+                ShootMethod();
             }
-            if (currentStyle == GunStyles.automatic)
+        }
+        if (currentStyle == GunStyles.automatic)
+        {
+            if (Input.GetButton("Fire1"))
             {
-                if (Input.GetButton("Fire1"))
+                if (!isShooting)
                 {
-                    ShootMethod();
+                    isShooting = true;
+                    Debug.Log(1);
+                    StartCoroutine("StartAutoShooting");
+                    Debug.Log(2);
                 }
+                else
+                    Debug.Log(3);
+
+                ShootMethod();
+            }
+            else if (Input.GetButtonUp("Fire1"))
+            {
+                EndShootMethod();
+                isShooting = false;
             }
         }
         waitTillNextFire -= roundsPerSecond * Time.deltaTime;
@@ -468,9 +481,6 @@ public class GunScript : MonoBehaviour
 
             if (bulletsInTheGun > 0)
             {
-
-
-
                 StartCoroutine("Shoot_Animation");
             }
 
@@ -486,10 +496,25 @@ public class GunScript : MonoBehaviour
 
     }
 
+    private void EndShootMethod()
+    {
+        handsAnimator.Play(endShootingAnimationName);
+    }
+
+    IEnumerator StartAutoShooting()
+    {
+        handsAnimator.Play(startShootingAnimationName);
+        yield return new WaitForSeconds(startShootingTime);
+    }
+
     IEnumerator Shoot_Animation()
     {
         handsAnimator.Play(shootAnimationName);
-        yield return new WaitForSeconds(shootAnimationTime);
+        if (currentStyle == GunStyles.nonautomatic)
+        {
+            //handsAnimator.Play(shootAnimationName);
+            yield return new WaitForSeconds(shootAnimationTime);
+        }
 
         int randomNumberForMuzzelFlash = Random.Range(0, 5);
         if (bullet)
@@ -679,4 +704,9 @@ public class GunScript : MonoBehaviour
     public string meeleAnimationName = "Character_Malee";
     public string shootAnimationName = "Player_Shoot";
     public float shootAnimationTime = 0.25f;
+
+    [Header("Auto-guns animations")]
+    public string startShootingAnimationName = "Player_Shoot";
+    public string endShootingAnimationName = "Player_Shoot";
+    public float startShootingTime = 0.25f;
 }
