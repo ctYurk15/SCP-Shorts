@@ -33,6 +33,9 @@ public class GunInventory : MonoBehaviour
     public Text gunAmmoText;
     public Text totalAmmoText;
 
+    public int primary_gun_ammo = 0;
+    public int secondary_gun_ammo = 0;
+
     /*
 	 * Calling the method that will update the icons of our guns if we carry any upon start.
 	 * Also will spawn a weapon upon start.
@@ -45,6 +48,9 @@ public class GunInventory : MonoBehaviour
 
         /*if (gunsIHave.Count == 0)
 			print ("No guns in the inventory");*/
+
+        if (primaryGun != null) primary_gun_ammo = (int) primaryGun.GetComponent<GunScript>().bulletsInTheGun;
+        if (secondaryGun != null) secondary_gun_ammo = (int)secondaryGun.GetComponent<GunScript>().bulletsInTheGun;
     }
 
     /*
@@ -182,6 +188,14 @@ public class GunInventory : MonoBehaviour
             currentHAndsAnimator.SetBool("changingWeapon", true);
 
             yield return new WaitForSeconds(0.8f);//0.8 time to change waepon, but since there is no change weapon animation there is no need to wait fo weapon taken down
+
+            //save current gun magazine state for future usage
+            int current_gun_ammo = (int)currentGun.GetComponent<GunScript>().bulletsInTheGun;
+
+            //Since isPrimaryGun var is changed
+            if (isPrimaryGun) secondary_gun_ammo = current_gun_ammo;
+            else primary_gun_ammo = current_gun_ammo;
+
             Destroy(currentGun);
 
             //GameObject resource = (GameObject) Resources.Load(gunsIHave[_redniBroj].ToString());
@@ -189,6 +203,9 @@ public class GunInventory : MonoBehaviour
 
             currentGun = (GameObject)Instantiate(resource, transform.position, /*gameObject.transform.rotation*/Quaternion.identity);
             AssignHandsAnimator(currentGun);
+
+            currentGun.GetComponent<GunScript>().bulletsInTheGun = isPrimaryGun ? primary_gun_ammo : secondary_gun_ammo;
+
             //}
             //else if(currentGun.name.Contains("Sword")){
             //	currentHAndsAnimator.SetBool("changingWeapon", true);

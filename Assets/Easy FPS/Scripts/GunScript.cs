@@ -383,19 +383,15 @@ public class GunScript : MonoBehaviour
                 ShootMethod();
             }
         }
-        if (currentStyle == GunStyles.automatic)
+        if (currentStyle == GunStyles.automatic && !isReloadingAmmo)
         {
             if (Input.GetButton("Fire1"))
             {
                 if (!isShooting)
                 {
                     isShooting = true;
-                    Debug.Log(1);
                     StartCoroutine("StartAutoShooting");
-                    Debug.Log(2);
                 }
-                else
-                    Debug.Log(3);
 
                 ShootMethod();
             }
@@ -478,7 +474,6 @@ public class GunScript : MonoBehaviour
     {
         if (waitTillNextFire <= 0 && !reloading && pmS.maxSpeed < 5)
         {
-
             if (bulletsInTheGun > 0)
             {
                 StartCoroutine("Shoot_Animation");
@@ -548,13 +543,14 @@ public class GunScript : MonoBehaviour
     [Header("reload time after anima")]
     [Tooltip("Time that passes after reloading. Depends on your reload animation length, because reloading can be interrupted via meele attack or running. So any action before this finishes will interrupt reloading.")]
     public float reloadChangeBulletsTime;
+    private bool isReloadingAmmo = false;
     IEnumerator Reload_Animation()
     {
         float available_bullets = player.GetComponent<GunInventory>().getAmmoCount(ammo_type);
-
-        Debug.Log("Total in inventory: " + available_bullets);
-        if (available_bullets > 0 && bulletsInTheGun < amountOfBulletsPerLoad && !reloading/* && !aiming*/)
+        
+        if (available_bullets > 0 && bulletsInTheGun < amountOfBulletsPerLoad && !reloading/* && !aiming*/ && !isReloadingAmmo)
         {
+            isReloadingAmmo = true;
 
             if (reloadSound_source.isPlaying == false && reloadSound_source != null)
             {
@@ -603,6 +599,7 @@ public class GunScript : MonoBehaviour
             }
 
             player.GetComponent<GunInventory>().setAmmoCount(ammo_type, (int)available_bullets);
+            isReloadingAmmo = false;
 
 
         }

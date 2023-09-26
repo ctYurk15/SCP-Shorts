@@ -121,6 +121,7 @@ MonoBehaviour:
   meeleAnimationName: Character_Malee
   shootAnimationName: Player_Shoot
   shootAnimationTime: 0.13
+  reloadingAnimationTime: 1.91
   startShootingAnimationName: Player_Shoot
   endShootingAnimationName: Player_Shoot
   startShootingTime: 0.25
