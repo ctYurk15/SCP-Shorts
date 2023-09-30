@@ -62,6 +62,8 @@ public class GunScript : MonoBehaviour
         rotationLastY = mls.currentYRotation;
         rotationLastX = mls.currentCameraXRotation;
 
+        pickup_source.Play();
+
     }
 
 
@@ -447,8 +449,9 @@ public class GunScript : MonoBehaviour
     [HideInInspector]
     public float gunPrecision;
 
-    [Tooltip("Audios for shootingSound, and reloading.")]
-    public AudioSource shoot_sound_source, reloadSound_source;
+    [Tooltip("Audios for shootingSound, reloading, pick-up")]
+    public AudioSource shoot_sound_source, reloadSound_source, pickup_source;
+    public SoundEffect shooting_sound_effect;
     [Tooltip("Sound that plays after successful attack bullet hit.")]
     public static AudioSource hitMarker;
 
@@ -523,10 +526,24 @@ public class GunScript : MonoBehaviour
             print("Missing the bullet prefab");
         holdFlash = Instantiate(muzzelFlash[randomNumberForMuzzelFlash], muzzelSpawn.transform.position /*- muzzelPosition*/, muzzelSpawn.transform.rotation * Quaternion.Euler(0, 0, 90)) as GameObject;
         holdFlash.transform.parent = muzzelSpawn.transform;
-        if (shoot_sound_source)
-            shoot_sound_source.Play();
+
+        //sound effect
+        if(shooting_sound_effect)
+        {
+            GameObject new_sound_source = Instantiate(shooting_sound_effect.gameObject, transform);
+            new_sound_source.GetComponent<SoundEffect>().PlayEffect();
+        }
         else
-            print("Missing 'Shoot Sound Source'.");
+        {
+            if (shoot_sound_source)
+            {
+                shoot_sound_source.Play();
+            }
+            else
+            {
+                print("Missing 'Shoot Sound Source'.");
+            }
+        }
 
         RecoilMath();
 
@@ -701,6 +718,7 @@ public class GunScript : MonoBehaviour
     public string meeleAnimationName = "Character_Malee";
     public string shootAnimationName = "Player_Shoot";
     public float shootAnimationTime = 0.25f;
+    public float takeDownAnimationTime = 1f;
 
     [Header("Auto-guns animations")]
     public string startShootingAnimationName = "Player_Shoot";

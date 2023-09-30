@@ -149,7 +149,7 @@ public class GunInventory : MonoBehaviour
         /*
 		 * Keypad numbers
 		 */
-        if (Input.GetKeyDown(KeyCode.Alpha1) && currentGunCounter != 0)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !isPrimaryGun)
         {
             /*switchWeaponCooldown = 0;
 			currentGunCounter = 0;*/
@@ -158,7 +158,7 @@ public class GunInventory : MonoBehaviour
 
             StartCoroutine("Spawn", currentGunCounter);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && currentGunCounter != 1)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && isPrimaryGun)
         {
             /*switchWeaponCooldown = 0;
 			currentGunCounter = 1;*/
@@ -172,36 +172,26 @@ public class GunInventory : MonoBehaviour
 
     /*
 	 * This method is called from Create_Weapon() upon pressing arrow up/down or scrolling the mouse wheel,
-	 * It will check if we carry a gun and destroy it, and its then going to load a gun prefab from our Resources Folder.
+	 * It will check if we carry a gun and destroy it, and its then going to load a gun prefab
 	 */
     IEnumerator Spawn(int _redniBroj = 0)
     {
-        if (weaponChanging)
-            weaponChanging.Play();
-        else
-            print("Missing Weapon Changing music clip.");
         if (currentGun)
         {
-            //if(currentGun.name.Contains("Gun")){
-            Debug.Log(currentGun);
-
             currentHAndsAnimator.SetBool("changingWeapon", true);
-
-            yield return new WaitForSeconds(0.8f);//0.8 time to change waepon, but since there is no change weapon animation there is no need to wait fo weapon taken down
+            yield return new WaitForSeconds(currentGun.GetComponent<GunScript>().takeDownAnimationTime);
 
             //save current gun magazine state for future usage
             int current_gun_ammo = (int)currentGun.GetComponent<GunScript>().bulletsInTheGun;
-
-            //Since isPrimaryGun var is changed
             if (isPrimaryGun) secondary_gun_ammo = current_gun_ammo;
             else primary_gun_ammo = current_gun_ammo;
 
             Destroy(currentGun);
 
             //GameObject resource = (GameObject) Resources.Load(gunsIHave[_redniBroj].ToString());
-            GameObject resource = isPrimaryGun ? primaryGun : secondaryGun;
 
-            currentGun = (GameObject)Instantiate(resource, transform.position, /*gameObject.transform.rotation*/Quaternion.identity);
+            GameObject new_gun = isPrimaryGun ? primaryGun : secondaryGun;
+            currentGun = (GameObject)Instantiate(new_gun, transform.position, /*gameObject.transform.rotation*/Quaternion.identity);
             AssignHandsAnimator(currentGun);
 
             currentGun.GetComponent<GunScript>().bulletsInTheGun = isPrimaryGun ? primary_gun_ammo : secondary_gun_ammo;
