@@ -352,13 +352,13 @@ MonoBehaviour:
   aimPlacePosition: {x: 0.0447, y: -0.08, z: 0.25}
   gunAimTime: 0.05
   reloading: 0
-  mouseSensitvity_notAiming: 4
-  mouseSensitvity_aiming: 1
+  mouseSensitvity_notAiming: 2
+  mouseSensitvity_aiming: 0.6
   mouseSensitvity_running: 1
   meeleAttack: 0
   aiming: 0
   mainCamera: {fileID: 0}
-  rotationLagTime: 0
+  rotationLagTime: 0.01
   forwardRotationAmount: {x: 1, y: 1}
   bulletSpawnPlace: {fileID: 0}
   bullet: {fileID: 128836, guid: c9e619a669d974fd28b5c89e43f2bce2, type: 3}
@@ -366,20 +366,20 @@ MonoBehaviour:
   recoilAmount_z: 0.04
   recoilAmount_x: 0.04
   recoilAmount_y: 0.04
-  recoilAmount_z_non: 0.02
-  recoilAmount_x_non: 0.01
-  recoilAmount_y_non: 0.01
-  recoilAmount_z_: 0.01
-  recoilAmount_x_: 0.005
-  recoilAmount_y_: 0.005
+  recoilAmount_z_non: 0.03
+  recoilAmount_x_non: 0.015
+  recoilAmount_y_non: 0.015
+  recoilAmount_z_: 0.02
+  recoilAmount_x_: 0.01
+  recoilAmount_y_: 0.01
   velocity_z_recoil: 0
   velocity_x_recoil: 0
   velocity_y_recoil: 0
-  recoilOverTime_z: 0.1
-  recoilOverTime_x: 0.1
-  recoilOverTime_y: 0.1
-  gunPrecision_notAiming: 300
-  gunPrecision_aiming: 100
+  recoilOverTime_z: 0.0075
+  recoilOverTime_x: 0.0075
+  recoilOverTime_y: 0.0075
+  gunPrecision_notAiming: 200
+  gunPrecision_aiming: 70
   cameraZoomRatio_notAiming: 60
   cameraZoomRatio_aiming: 40
   secondCameraZoomRatio_notAiming: 60
