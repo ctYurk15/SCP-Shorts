@@ -450,7 +450,7 @@ public class GunScript : MonoBehaviour
     public float gunPrecision;
 
     [Tooltip("Audios for shootingSound, reloading, pick-up")]
-    public AudioSource shoot_sound_source, reloadSound_source, pickup_source;
+    public AudioSource shoot_sound_source, reloadSound_source, reloadWithTriggerSound_source, pickup_source;
     public SoundEffect shooting_sound_effect;
     [Tooltip("Sound that plays after successful attack bullet hit.")]
     public static AudioSource hitMarker;
@@ -568,23 +568,20 @@ public class GunScript : MonoBehaviour
         if (available_bullets > 0 && bulletsInTheGun < amountOfBulletsPerLoad && !reloading/* && !aiming*/ && !isReloadingAmmo)
         {
             isReloadingAmmo = true;
+            bool reloading_without_trigger = bulletsInTheGun > 0;
 
-            if (reloadSound_source.isPlaying == false && reloadSound_source != null)
-            {
-                if (reloadSound_source)
-                    reloadSound_source.Play();
-                else
-                    print("'Reload Sound Source' missing.");
-            }
+            //sound
+            if (!reloading_without_trigger && reloadWithTriggerSound_source != null && reloadWithTriggerSound_source.isPlaying == false) reloadWithTriggerSound_source.Play();
+            else if(reloading_without_trigger && reloadSound_source != null && reloadSound_source.isPlaying == false) reloadSound_source.Play();
 
-
-            handsAnimator.SetBool("reloading", true);
+            handsAnimator.SetBool(reloading_without_trigger ? "reloading" : "reloading_with_trigger", true);
             yield return new WaitForSeconds(0.5f);
-            handsAnimator.SetBool("reloading", false);
-
+            handsAnimator.SetBool(reloading_without_trigger ? "reloading" : "reloading_with_trigger", false);
 
 
             yield return new WaitForSeconds(reloadChangeBulletsTime - 0.5f);//minus ovo vrijeme cekanja na yield
+
+            float initial_bullets_in_the_gun = bulletsInTheGun;
             if (meeleAttack == false && pmS.maxSpeed != runningSpeed)
             {
 
@@ -698,13 +695,12 @@ public class GunScript : MonoBehaviour
 
         if (handsAnimator)
         {
-
-            reloading = handsAnimator.GetCurrentAnimatorStateInfo(0).IsName(reloadAnimationName);
+            reloading = handsAnimator.GetCurrentAnimatorStateInfo(0).IsName(bulletsInTheGun > 0 ? reloadAnimationName : reloadWithTriggerAnimationName);
 
             handsAnimator.SetFloat("walkSpeed", pmS.currentSpeed);
             handsAnimator.SetBool("aiming", Input.GetButton("Fire2"));
             handsAnimator.SetInteger("maxSpeed", pmS.maxSpeed);
-            if (Input.GetKeyDown(KeyCode.R) && pmS.maxSpeed < 5 && !reloading && !meeleAttack/* && !aiming*/)
+            if (Input.GetKeyDown(KeyCode.R) && pmS.maxSpeed < 5 && !isReloadingAmmo && !meeleAttack/* && !aiming*/)
             {
                 StartCoroutine("Reload_Animation");
             }
@@ -714,11 +710,15 @@ public class GunScript : MonoBehaviour
 
     [Header("Animation names")]
     public string reloadAnimationName = "Player_Reload";
+    public string reloadWithTriggerAnimationName = "Player_Reload";
+    //public string reloadWithoutTiggerAnimationName = "Player_Reload";
     public string aimingAnimationName = "Player_AImpose";
     public string meeleAnimationName = "Character_Malee";
     public string shootAnimationName = "Player_Shoot";
+    public string reloadTriggerAnimationName = "";
     public float shootAnimationTime = 0.25f;
     public float takeDownAnimationTime = 1f;
+    public float reloadAnimationTime = 1f;
 
     [Header("Auto-guns animations")]
     public string startShootingAnimationName = "Player_Shoot";
