@@ -35,6 +35,7 @@ Transform:
   - {fileID: 453500483065131042}
   - {fileID: 6887992894293374785}
   - {fileID: 7086469392597120992}
+  - {fileID: 467112543099169520}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -60,6 +61,10 @@ MonoBehaviour:
   ammo_type: 9mm
   bullet_impact_force: 1000
   damage_force: 40
+  shells_pool: {fileID: 6776080760486930665}
+  shells_spawn_point: {fileID: 2221169416110556910}
+  shells_shoot_time: 0.16
+  shells_push_force: 50
   currentGunPosition: {x: 0, y: 0, z: 0}
   restPlacePosition: {x: 0.14, y: -0.06, z: 0.46}
   aimPlacePosition: {x: 0.219, y: -0.02, z: 0.41}
@@ -420,6 +425,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2221169416110556910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3704157556749323588}
+  m_Layer: 0
+  m_Name: shellsSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3704157556749323588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2221169416110556910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0011, y: -0.0055, z: 0.0651}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3321993710622218992}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3184678062146524497
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,6 +840,2155 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &8737823938699510858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 467112543099169520}
+  - component: {fileID: 6776080760486930665}
+  m_Layer: 8
+  m_Name: ShellsPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &467112543099169520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8737823938699510858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4817910469281909875}
+  - {fileID: 950241797421206283}
+  - {fileID: 596796616109542472}
+  - {fileID: 6179012815028516356}
+  - {fileID: 2247751282813755647}
+  - {fileID: 931404928405655744}
+  - {fileID: 7034984987544165301}
+  - {fileID: 6023407432596245683}
+  - {fileID: 7440673244376084765}
+  - {fileID: 7791068579594704421}
+  - {fileID: 6423133934653687132}
+  - {fileID: 6446987258817929217}
+  - {fileID: 6133253968734106963}
+  - {fileID: 2982832048240254144}
+  - {fileID: 427504105035052672}
+  - {fileID: 8768089127316287046}
+  - {fileID: 4695324556791578888}
+  - {fileID: 1425435791657521385}
+  - {fileID: 6529759158395469749}
+  - {fileID: 1877432323368972804}
+  - {fileID: 7324055921041782956}
+  - {fileID: 4369156690360532202}
+  - {fileID: 4494765735686702803}
+  - {fileID: 8581672753509941943}
+  - {fileID: 6983953196198078409}
+  - {fileID: 6120437109439171768}
+  - {fileID: 1498794143952504478}
+  - {fileID: 7030723426873140870}
+  - {fileID: 3456607790184457115}
+  - {fileID: 6684186549526259964}
+  - {fileID: 4941834585206837913}
+  - {fileID: 53294659975755554}
+  - {fileID: 8258908757779560139}
+  - {fileID: 2287570326379601697}
+  - {fileID: 7610819353797546370}
+  - {fileID: 1041240207393458943}
+  - {fileID: 4016575017141729394}
+  - {fileID: 1765735676565377111}
+  - {fileID: 5450872352006601244}
+  - {fileID: 3005693761079808880}
+  - {fileID: 7915696943867883815}
+  - {fileID: 8862034940066319515}
+  - {fileID: 1748304141543850568}
+  - {fileID: 404218509885569375}
+  - {fileID: 6742818917943451288}
+  - {fileID: 6370033187317690825}
+  - {fileID: 6334297828282123422}
+  - {fileID: 1350171368842981031}
+  - {fileID: 4076390912505297827}
+  - {fileID: 910039462833372160}
+  - {fileID: 4703947979813746847}
+  - {fileID: 6284204969463030577}
+  - {fileID: 1321477650824818637}
+  - {fileID: 8490635508060532054}
+  - {fileID: 8275274933582107985}
+  - {fileID: 7528530419875333047}
+  - {fileID: 3156785825922581946}
+  - {fileID: 1058099225530189774}
+  - {fileID: 7039991273195059182}
+  - {fileID: 848543208721200504}
+  - {fileID: 324076027888225980}
+  - {fileID: 2111491017819842228}
+  - {fileID: 5194938807913076663}
+  - {fileID: 2006865819516730921}
+  m_Father: {fileID: 469018}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6776080760486930665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8737823938699510858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186cfac196dba6e4eb0eec312fbf7e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  return_time: 7.5
+--- !u!1001 &31259453539725075
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &848543208721200504 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 31259453539725075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &279663666698343971
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &596796616109542472 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 279663666698343971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &362170748538314149
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &1058099225530189774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 362170748538314149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &421814100070535316
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &1041240207393458943 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 421814100070535316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &470133728404509024
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &950241797421206283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 470133728404509024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &506852673236706923
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &910039462833372160 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 506852673236706923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &523732689716824747
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &931404928405655744 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 523732689716824747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &798536770340367689
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &53294659975755554 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 798536770340367689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1023932659059122996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &404218509885569375 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1023932659059122996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1028900390631681259
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &427504105035052672 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1028900390631681259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1141370782467839191
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &324076027888225980 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1141370782467839191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1184585342340359234
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &2006865819516730921 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1184585342340359234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1271234468350290031
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &1877432323368972804 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1271234468350290031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1380503909698095676
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &1765735676565377111 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1380503909698095676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1435125016494528547
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &1748304141543850568 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1435125016494528547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1447549753077957962
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &2287570326379601697 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1447549753077957962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1483991199767657108
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &2247751282813755647 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1483991199767657108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1649489712595500255
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &2111491017819842228 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1649489712595500255}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1756832179408718466
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &1425435791657521385 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1756832179408718466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1807467885291369676
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &1350171368842981031 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1807467885291369676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1873351415032313254
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &1321477650824818637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 1873351415032313254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2262327186445278453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &1498794143952504478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 2262327186445278453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2334703233058250705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &3156785825922581946 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 2334703233058250705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2458949242110806299
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &3005693761079808880 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 2458949242110806299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2507531041778747051
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &2982832048240254144 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 2507531041778747051}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2617147441672419824
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &3456607790184457115 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 2617147441672419824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3691702839118930376
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &4076390912505297827 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 3691702839118930376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3875684327535287480
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &4494765735686702803 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 3875684327535287480}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3966531214328456833
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &4369156690360532202 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 3966531214328456833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4329105419458765337
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &4016575017141729394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 4329105419458765337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4612010286536381308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -905,11 +3090,150 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7933989346716862860, guid: 1bcc6d3f58b5689439d0176ab72d6b96, type: 3}
       insertIndex: -1
       addedObject: {fileID: 476408}
+    - targetCorrespondingSourceObject: {fileID: 7933989346716862860, guid: 1bcc6d3f58b5689439d0176ab72d6b96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3704157556749323588}
   m_SourcePrefab: {fileID: 100100000, guid: 1bcc6d3f58b5689439d0176ab72d6b96, type: 3}
 --- !u!4 &3321993710622218992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7933989346716862860, guid: 1bcc6d3f58b5689439d0176ab72d6b96, type: 3}
   m_PrefabInstance: {fileID: 4612010286536381308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4615288318985756791
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &5450872352006601244 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 4615288318985756791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4877836627658067420
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &5194938807913076663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 4877836627658067420}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5186082540419346850
 PrefabInstance:
@@ -2710,4 +5034,2184 @@ Transform:
 Animator:
   m_CorrespondingSourceObject: {fileID: 2665585454221192964, guid: cc8d9a226d0db8c40925dcbdf32b1a58, type: 3}
   m_PrefabInstance: {fileID: 5186082540419346850}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5293145494318552600
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856466318410237452, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &4817910469281909875 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 5293145494318552600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5368443645869759331
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &4695324556791578888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 5368443645869759331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5399367352989573876
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &4703947979813746847 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 5399367352989573876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5709794242176502002
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &4941834585206837913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 5709794242176502002}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5852412975532336606
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6529759158395469749 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 5852412975532336606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5947603140989968183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6423133934653687132 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 5947603140989968183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5967800582683097706
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6446987258817929217 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 5967800582683097706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6039125532622924706
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6370033187317690825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 6039125532622924706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6213526951336051955
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6742818917943451288 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 6213526951336051955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6299040007693464215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6684186549526259964 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 6299040007693464215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6358764804410627800
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6023407432596245683 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 6358764804410627800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6651356588570762997
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6334297828282123422 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 6651356588570762997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6673302052277893466
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6284204969463030577 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 6673302052277893466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6803228923151936623
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6179012815028516356 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 6803228923151936623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6824112591302340408
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6133253968734106963 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 6824112591302340408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6870670987697034963
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6120437109439171768 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 6870670987697034963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7077019937259867113
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &7610819353797546370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 7077019937259867113}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7193120812526361052
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &7528530419875333047 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 7193120812526361052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7382415384418052940
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &7915696943867883815 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 7382415384418052940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7473372132618865742
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &7791068579594704421 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 7473372132618865742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7640610005459698142
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &7034984987544165301 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 7640610005459698142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7645631128079576453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &7039991273195059182 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 7645631128079576453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7654864235632295149
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &7030723426873140870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 7654864235632295149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7728831918101839266
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &6983953196198078409 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 7728831918101839266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7848431816203840374
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &7440673244376084765 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 7848431816203840374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7930251587773309639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &7324055921041782956 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 7930251587773309639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8166690857668237040
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &8862034940066319515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 8166690857668237040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8216585904980554797
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &8768089127316287046 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 8216585904980554797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8733647368344186016
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &8258908757779560139 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 8733647368344186016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8754436336110604090
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &8275274933582107985 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 8754436336110604090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8985127817639745756
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &8581672753509941943 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 8985127817639745756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9114550904051873597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 467112543099169520}
+    m_Modifications:
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_Name
+      value: Glock17Shell (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726784957602821992, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+--- !u!4 &8490635508060532054 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 840396060831390315, guid: 158fca1d96dc1b5498bccf931326c538, type: 3}
+  m_PrefabInstance: {fileID: 9114550904051873597}
   m_PrefabAsset: {fileID: 0}

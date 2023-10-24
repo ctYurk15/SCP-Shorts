@@ -32,6 +32,12 @@ public class GunScript : MonoBehaviour
     [Tooltip("Gun damage")]
     public float damage_force = 60;
 
+    [Header("Shells settings")]
+    public ObjectsPool shells_pool;
+    public GameObject shells_spawn_point;
+    public float shells_shoot_time = 0.1f;
+    public float shells_push_force = 2f;
+
     private Transform player;
     private Camera cameraComponent;
     private Transform gunPlaceHolder;
@@ -510,8 +516,16 @@ public class GunScript : MonoBehaviour
         handsAnimator.Play(shootAnimationName);
         if (currentStyle == GunStyles.nonautomatic)
         {
-            //handsAnimator.Play(shootAnimationName);
-            yield return new WaitForSeconds(shootAnimationTime);
+            handsAnimator.Play(shootAnimationName);
+            yield return new WaitForSeconds(shells_shoot_time);
+            SpawnShell();
+            yield return new WaitForSeconds(shootAnimationTime - shells_shoot_time);
+        }
+        else
+        {
+            handsAnimator.Play(shootAnimationName);
+            //yield return new WaitForSeconds(shells_shoot_time);
+            SpawnShell();
         }
 
         int randomNumberForMuzzelFlash = Random.Range(0, 5);
@@ -549,6 +563,14 @@ public class GunScript : MonoBehaviour
 
         waitTillNextFire = 1;
         bulletsInTheGun -= 1;
+    }
+
+    private void SpawnShell()
+    {
+        GameObject new_shell = shells_pool.getNext();
+        new_shell.transform.position = shells_spawn_point.transform.position;
+        new_shell.transform.GetComponent<Rigidbody>().AddForce(transform.right * shells_push_force);
+        new_shell.transform.GetComponent<Rigidbody>().AddForce(transform.up * shells_push_force);
     }
 
 
