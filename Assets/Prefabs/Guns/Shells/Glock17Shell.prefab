@@ -599,6 +599,7 @@ MonoBehaviour:
   ignore_tags:
   - GunShell
   - Player
+  - Magazine
 --- !u!1001 &5856466318410636428
 PrefabInstance:
   m_ObjectHideFlags: 0

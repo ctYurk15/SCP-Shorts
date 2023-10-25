@@ -38,6 +38,11 @@ public class GunScript : MonoBehaviour
     public float shells_shoot_time = 0.1f;
     public float shells_push_force = 2f;
 
+    [Header("Droping magazines settings")]
+    public ObjectsPool magazines_pool;
+    public GameObject magazines_spawn_point;
+    public float magazines_spawn_time = 0.1f;
+
     private Transform player;
     private Camera cameraComponent;
     private Transform gunPlaceHolder;
@@ -573,6 +578,13 @@ public class GunScript : MonoBehaviour
         new_shell.transform.GetComponent<Rigidbody>().AddForce(transform.up * shells_push_force);
     }
 
+    private void spawnMagazine()
+    {
+        GameObject new_magazine = magazines_pool.getNext();
+        new_magazine.transform.position = magazines_spawn_point.transform.position;
+        new_magazine.transform.Rotate(new Vector3(90, 90, 0));
+    }
+
 
 
     /*
@@ -596,12 +608,17 @@ public class GunScript : MonoBehaviour
             if (!reloading_without_trigger && reloadWithTriggerSound_source != null && reloadWithTriggerSound_source.isPlaying == false) reloadWithTriggerSound_source.Play();
             else if(reloading_without_trigger && reloadSound_source != null && reloadSound_source.isPlaying == false) reloadSound_source.Play();
 
+            //start animation
             handsAnimator.SetBool(reloading_without_trigger ? "reloading" : "reloading_with_trigger", true);
             yield return new WaitForSeconds(0.5f);
             handsAnimator.SetBool(reloading_without_trigger ? "reloading" : "reloading_with_trigger", false);
 
+            //spawn magazine
+            yield return new WaitForSeconds(magazines_spawn_time - 0.5f);
+            this.spawnMagazine();
 
-            yield return new WaitForSeconds(reloadChangeBulletsTime - 0.5f);//minus ovo vrijeme cekanja na yield
+
+            yield return new WaitForSeconds(reloadChangeBulletsTime - magazines_spawn_time  - 0.5f);//minus ovo vrijeme cekanja na yield
 
             float initial_bullets_in_the_gun = bulletsInTheGun;
             if (meeleAttack == false && pmS.maxSpeed != runningSpeed)

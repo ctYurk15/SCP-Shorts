@@ -1503,7 +1503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186cfac196dba6e4eb0eec312fbf7e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  return_time: 7
+  return_time: 8
 --- !u!114 &2184484634485268014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1516,7 +1516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3072b442533d9b7499be6948aad83236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn_rate: 2
+  spawn_rate: 5
 --- !u!1 &3933971918627881196
 GameObject:
   m_ObjectHideFlags: 0

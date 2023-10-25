@@ -37,13 +37,15 @@ public class ObjectsPool : MonoBehaviour
 
     private void Return()
     {
-        GameObject object_to_return = return_queue.Dequeue();
-
-        if(object_to_return != null)
+        if(return_queue.Count != 0)
         {
-            object_to_return.transform.parent = this.transform;
-            object_to_return.transform.position = this.transform.position;
-            object_to_return.SetActive(false);
+            GameObject object_to_return = return_queue.Dequeue();
+            if (object_to_return != null)
+            {
+                object_to_return.transform.parent = this.transform;
+                object_to_return.transform.position = this.transform.position;
+                object_to_return.SetActive(false);
+            }
         }
     }
 }
