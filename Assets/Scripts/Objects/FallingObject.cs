@@ -21,7 +21,6 @@ public class FallingObject : MonoBehaviour
         //in order to avoid continious sound play
         if (!played_hit_sound && !ignore_tags.Contains(object_tag))
         {
-            Debug.Log(collision.transform.name);
             switch (object_tag)
             {
                 case "Sand":
