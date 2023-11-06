@@ -11,7 +11,9 @@ public class BulletScript : MonoBehaviour
     //[Tooltip("Prefab of wall damange hit")]
     //public GameObject decalHitWall;
     [Tooltip("Decal will need to be sligtly infront of the wall so it doesnt cause rendeing problems so for best feel put from 0.01-0.1.")]
-    public float floatInfrontOfWall;
+    //public float floatInfrontOfWall;
+    public float min_distance_from_wall = 0.02f;
+    public float max_distance_from_wall = 0.04f;
    /* [Tooltip("Blood prefab particle this bullet will create upoon hitting enemy")]
     public GameObject bloodEffect;*/
     [Tooltip("Put Weapon layer and Player layer to ignore bullet raycast.")]
@@ -41,7 +43,7 @@ public class BulletScript : MonoBehaviour
         {
             //if (decalHitWall)
             {
-                GameObject decalHitWall = null;
+                GameObject bullet_hole_object = null;
                 string object_tag = hit.transform.tag;
 
                 if(!tags_to_avoid.Contains(object_tag))
@@ -49,23 +51,27 @@ public class BulletScript : MonoBehaviour
                     switch (object_tag)
                     {
                         case "Wood":
-                            decalHitWall = wooden_bullet_hole;
+                            bullet_hole_object = wooden_bullet_hole;
                             break;
                         case "Sand":
-                            decalHitWall = sand_bullet_hole;
+                            bullet_hole_object = sand_bullet_hole;
                             break;
                         case "Metal":
-                            decalHitWall = metal_bullet_hole;
+                            bullet_hole_object = metal_bullet_hole;
                             break;
                         case "Concrete":
-                            decalHitWall = concrete_bullet_hole;
+                            bullet_hole_object = concrete_bullet_hole;
                             break;
                         default:
-                            decalHitWall = default_bullet_hole;
+                            bullet_hole_object = default_bullet_hole;
                             break;
                     }
 
-                    GameObject bullet_damage = Instantiate(decalHitWall, hit.point + hit.normal * floatInfrontOfWall, Quaternion.LookRotation(hit.normal));
+                    float distance_from_wall = Random.Range(min_distance_from_wall, max_distance_from_wall);
+                    Vector3 bullet_hole_position = hit.point + hit.normal * distance_from_wall;
+
+                    GameObject bullet_damage = Instantiate(bullet_hole_object, bullet_hole_position, Quaternion.LookRotation(hit.normal));
+               
                     bullet_damage.transform.SetParent(hit.transform);
                     bullet_damage.GetComponent<RandomSkinSelector>().activate();
                 }

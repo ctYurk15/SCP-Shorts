@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2320268136010198655}
   m_Layer: 2
   m_Name: M16MetalicBulletHole
-  m_TagString: Untagged
+  m_TagString: BulletHole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,6 +82,10 @@ PrefabInstance:
     - target: {fileID: 559407491718082692, guid: edc40ca342d582448bf803ef4b0c5001, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 559407491718082692, guid: edc40ca342d582448bf803ef4b0c5001, type: 3}
+      propertyPath: m_TagString
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 2825771975864031917, guid: edc40ca342d582448bf803ef4b0c5001, type: 3}
       propertyPath: m_RootOrder
@@ -156,6 +160,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 815203494311570969, guid: ae44d0f0c6e79354795b8fd1fc7dbe25, type: 3}
+      propertyPath: m_TagString
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 3144759145089221680, guid: ae44d0f0c6e79354795b8fd1fc7dbe25, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -229,6 +237,10 @@ PrefabInstance:
     - target: {fileID: 5748433917242350924, guid: f0b7c28863c7f554d9f8d4a150de9110, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748433917242350924, guid: f0b7c28863c7f554d9f8d4a150de9110, type: 3}
+      propertyPath: m_TagString
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 8012687368322873189, guid: f0b7c28863c7f554d9f8d4a150de9110, type: 3}
       propertyPath: m_RootOrder
@@ -346,6 +358,10 @@ PrefabInstance:
     - target: {fileID: 8397900530049635054, guid: 280dd7b1dbbe3bb4b8a414d1e9093edf, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397900530049635054, guid: 280dd7b1dbbe3bb4b8a414d1e9093edf, type: 3}
+      propertyPath: m_TagString
+      value: BulletHole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

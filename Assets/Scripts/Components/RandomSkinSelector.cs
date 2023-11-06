@@ -9,7 +9,6 @@ public class RandomSkinSelector : MonoBehaviour
     public void activate()
     {
         int index = UnityEngine.Random.Range(0, skins.Length);
-        Debug.Log(index);
         this.skins[index].SetActive(true);
     }
 
