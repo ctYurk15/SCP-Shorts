@@ -31,6 +31,15 @@ public class BulletScript : MonoBehaviour
     public GameObject default_bullet_hole;
     public string[] tags_to_avoid = { };
 
+    [Space]
+
+    [Header("Hit Effects")]
+    public GameObject wooden_hit_effect;
+    public GameObject metal_hit_effect;
+    public GameObject concrete_hit_effect;
+    public GameObject sand_hit_effect;
+    public GameObject default_hit_effect;
+
     /*
 	* Uppon bullet creation with this script attatched,
 	* bullet creates a raycast which searches for corresponding tags.
@@ -44,6 +53,7 @@ public class BulletScript : MonoBehaviour
             //if (decalHitWall)
             {
                 GameObject bullet_hole_object = null;
+                GameObject hit_effect_object = null;
                 string object_tag = hit.transform.tag;
 
                 if(!tags_to_avoid.Contains(object_tag))
@@ -52,46 +62,70 @@ public class BulletScript : MonoBehaviour
                     {
                         case "Wood":
                             bullet_hole_object = wooden_bullet_hole;
+                            hit_effect_object = wooden_hit_effect;
                             break;
                         case "Sand":
                             bullet_hole_object = sand_bullet_hole;
+                            hit_effect_object = sand_hit_effect;
                             break;
                         case "Metal":
                             bullet_hole_object = metal_bullet_hole;
+                            hit_effect_object = metal_hit_effect;
                             break;
                         case "Concrete":
                             bullet_hole_object = concrete_bullet_hole;
+                            hit_effect_object = concrete_hit_effect;
                             break;
                         default:
                             bullet_hole_object = default_bullet_hole;
+                            hit_effect_object = default_hit_effect;
                             break;
                     }
 
-                    float distance_from_wall = Random.Range(min_distance_from_wall, max_distance_from_wall);
-                    Vector3 bullet_hole_position = hit.point + hit.normal * distance_from_wall;
-
-                    GameObject bullet_damage = Instantiate(bullet_hole_object, bullet_hole_position, Quaternion.LookRotation(hit.normal));
-               
-                    bullet_damage.transform.SetParent(hit.transform);
-                    bullet_damage.GetComponent<RandomSkinSelector>().activate();
+                    this.CreateHole(bullet_hole_object, hit);
+                    this.CreateHitEffect(hit_effect_object);
                 }
 
-                /*if (hit.transform.tag == "Dummie")
-                {
-                    Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                }*/
-                if (hit.transform.GetComponent<Rigidbody>() != null)
-                {
-                    hit.transform.GetComponent<Rigidbody>().AddForce(transform.forward * this.impactForce);
-                }
-                if (hit.transform.GetComponent<DestructibleProp>() != null)
-                {
-                    hit.transform.GetComponent<DestructibleProp>().Damage(damage);
-                }
+                this.OtherInteractions(hit);
+                
             }
             Destroy(gameObject);
         }
         Destroy(gameObject, 0.1f);
+    }
+
+    private void CreateHole(GameObject bullet_hole_object, RaycastHit hit)
+    {
+        if(bullet_hole_object != null)
+        {
+            float distance_from_wall = Random.Range(min_distance_from_wall, max_distance_from_wall);
+            Vector3 bullet_hole_position = hit.point + hit.normal * distance_from_wall;
+
+            GameObject bullet_damage = Instantiate(bullet_hole_object, bullet_hole_position, Quaternion.LookRotation(hit.normal));
+
+            bullet_damage.transform.SetParent(hit.transform);
+            bullet_damage.GetComponent<RandomSkinSelector>().activate();
+        }
+    }
+
+    private void CreateHitEffect(GameObject hit_effect_object)
+    {
+        if(hit_effect_object != null)
+        {
+            Instantiate(hit_effect_object, hit.point, Quaternion.LookRotation(hit.normal));
+        }
+    }
+
+    private void OtherInteractions(RaycastHit hit)
+    {
+        if (hit.transform.GetComponent<Rigidbody>() != null)
+        {
+            hit.transform.GetComponent<Rigidbody>().AddForce(transform.forward * this.impactForce);
+        }
+        if (hit.transform.GetComponent<DestructibleProp>() != null)
+        {
+            hit.transform.GetComponent<DestructibleProp>().Damage(damage);
+        }
     }
 
 }

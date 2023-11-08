@@ -127,3 +127,8 @@ MonoBehaviour:
   - NoBulletHoles
   - GunShell
   - Magazine
+  wooden_hit_effect: {fileID: 138412, guid: e10f4e0fc27b2b64a95f6a74c1b8911c, type: 3}
+  metal_hit_effect: {fileID: 180772, guid: 5a6e621f470de0644bc0aefbda5b4e70, type: 3}
+  concrete_hit_effect: {fileID: 108086, guid: 293762fb4527c144c89b95b181c5f038, type: 3}
+  sand_hit_effect: {fileID: 186004, guid: cdf488792baf9cd49b965d1dcbf9ca35, type: 3}
+  default_hit_effect: {fileID: 4832667834948867757, guid: c694fdd9740a149469d20171ef8ebd1c, type: 3}
