@@ -9,6 +9,7 @@ public class FallingObject : MonoBehaviour
     public AudioSource sand_hit_sound;
     public AudioSource metallic_hit_sound;
     public AudioSource concrete_hit_sound;
+    public AudioSource wood_hit_sound;
 
     public string[] ignore_tags = { };
 
@@ -31,6 +32,9 @@ public class FallingObject : MonoBehaviour
                     break;
                 case "Concrete":
                     concrete_hit_sound.Play();
+                    break;
+                case "Wood":
+                    wood_hit_sound.Play();
                     break;
                 default:
                     default_hit_sound.Play();

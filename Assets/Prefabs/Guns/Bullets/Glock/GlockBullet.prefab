@@ -132,3 +132,8 @@ MonoBehaviour:
   concrete_hit_effect: {fileID: 108086, guid: 293762fb4527c144c89b95b181c5f038, type: 3}
   sand_hit_effect: {fileID: 186004, guid: cdf488792baf9cd49b965d1dcbf9ca35, type: 3}
   default_hit_effect: {fileID: 4832667834948867757, guid: c694fdd9740a149469d20171ef8ebd1c, type: 3}
+  wooden_hit_sound_effect: {fileID: 14766342093884478, guid: d2960d0bf81a9e648a08663c1f818606, type: 3}
+  metal_hit_sound_effect: {fileID: 14766342093884478, guid: 9fcb69bf9096c7e4b9f936a8c6938844, type: 3}
+  concrete_hit_sound_effect: {fileID: 14766342093884478, guid: 63e558bfdaeefa6448e3e2cbdb3e334b, type: 3}
+  sand_hit_sound_effect: {fileID: 14766342093884478, guid: f5e13ac4ddc8b744eacfc679f38de3cc, type: 3}
+  default_hit_sound_effect: {fileID: 14766342093884478, guid: 63e558bfdaeefa6448e3e2cbdb3e334b, type: 3}

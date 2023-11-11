@@ -40,6 +40,15 @@ public class BulletScript : MonoBehaviour
     public GameObject sand_hit_effect;
     public GameObject default_hit_effect;
 
+    [Space]
+
+    [Header("Hit Sounds")]
+    public GameObject wooden_hit_sound_effect;
+    public GameObject metal_hit_sound_effect;
+    public GameObject concrete_hit_sound_effect;
+    public GameObject sand_hit_sound_effect;
+    public GameObject default_hit_sound_effect;
+
     /*
 	* Uppon bullet creation with this script attatched,
 	* bullet creates a raycast which searches for corresponding tags.
@@ -54,6 +63,7 @@ public class BulletScript : MonoBehaviour
             {
                 GameObject bullet_hole_object = null;
                 GameObject hit_effect_object = null;
+                GameObject hit_sound_effect_object = null;
                 string object_tag = hit.transform.tag;
 
                 if(!tags_to_avoid.Contains(object_tag))
@@ -63,27 +73,33 @@ public class BulletScript : MonoBehaviour
                         case "Wood":
                             bullet_hole_object = wooden_bullet_hole;
                             hit_effect_object = wooden_hit_effect;
+                            hit_sound_effect_object = wooden_hit_sound_effect;
                             break;
                         case "Sand":
                             bullet_hole_object = sand_bullet_hole;
                             hit_effect_object = sand_hit_effect;
+                            hit_sound_effect_object = sand_hit_sound_effect;
                             break;
                         case "Metal":
                             bullet_hole_object = metal_bullet_hole;
                             hit_effect_object = metal_hit_effect;
+                            hit_sound_effect_object = metal_hit_sound_effect;
                             break;
                         case "Concrete":
                             bullet_hole_object = concrete_bullet_hole;
                             hit_effect_object = concrete_hit_effect;
+                            hit_sound_effect_object = concrete_hit_sound_effect;
                             break;
                         default:
                             bullet_hole_object = default_bullet_hole;
                             hit_effect_object = default_hit_effect;
+                            hit_sound_effect_object = default_hit_sound_effect;
                             break;
                     }
 
                     this.CreateHole(bullet_hole_object, hit);
-                    this.CreateHitEffect(hit_effect_object);
+                    this.CreateHitEffect(hit_effect_object, hit);
+                    this.CreateHitSoundEffect(hit_sound_effect_object, hit);
                 }
 
                 this.OtherInteractions(hit);
@@ -108,11 +124,19 @@ public class BulletScript : MonoBehaviour
         }
     }
 
-    private void CreateHitEffect(GameObject hit_effect_object)
+    private void CreateHitEffect(GameObject hit_effect_object, RaycastHit hit)
     {
         if(hit_effect_object != null)
         {
             Instantiate(hit_effect_object, hit.point, Quaternion.LookRotation(hit.normal));
+        }
+    }
+
+    private void CreateHitSoundEffect(GameObject hit_sound_effect_object, RaycastHit hit)
+    {
+        if (hit_sound_effect_object != null)
+        {
+            Instantiate(hit_sound_effect_object, hit.point, Quaternion.LookRotation(hit.normal));
         }
     }
 
