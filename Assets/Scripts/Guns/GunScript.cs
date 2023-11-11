@@ -533,7 +533,7 @@ public class GunScript : MonoBehaviour
             SpawnShell();
         }
 
-        int randomNumberForMuzzelFlash = Random.Range(0, 5);
+        int randomNumberForMuzzelFlash = Random.Range(0, muzzelFlash.Length);
         if (bullet)
         {
             bullet.GetComponent<BulletScript>().impactForce = bullet_impact_force;

@@ -401,11 +401,7 @@ MonoBehaviour:
   pickup_source: {fileID: 8911331753690466476}
   shooting_sound_effect: {fileID: 2882074619229688247, guid: bc52b834466829d4786a4ed8b6366b0d, type: 3}
   muzzelFlash:
-  - {fileID: 199458, guid: 51b76f616384d4946bed4ecc9a6c2c3e, type: 3}
-  - {fileID: 199458, guid: 487eef9aff9d0f543836d5af5ab26430, type: 3}
-  - {fileID: 199458, guid: 7b6a7e40bd9ccc0489274923930761c7, type: 3}
-  - {fileID: 199458, guid: 29d86feb88bf925428f9d7de6d4b401f, type: 3}
-  - {fileID: 199458, guid: 4aa4c63f0f9d6a84dbaeed6b9caeca80, type: 3}
+  - {fileID: 124018, guid: b9c047de5f05ad04f9b205df93a4a495, type: 3}
   muzzelSpawn: {fileID: 110108}
   reloadChangeBulletsTime: 1.2
   horizontal_crosshair: {fileID: 2800000, guid: e1aa4c90445944348a112c3b7fa4b318, type: 3}
