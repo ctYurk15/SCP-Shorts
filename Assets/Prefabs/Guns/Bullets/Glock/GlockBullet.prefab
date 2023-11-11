@@ -121,7 +121,7 @@ MonoBehaviour:
   wooden_bullet_hole: {fileID: 179232, guid: 747d6d42a3ffc894d97f09498252cb93, type: 3}
   metal_bullet_hole: {fileID: 179232, guid: 569259a3cb68b964b9508dddc5d487be, type: 3}
   concrete_bullet_hole: {fileID: 179232, guid: 2f393b0477fb7cd4cad1f3ecb1753470, type: 3}
-  sand_bullet_hole: {fileID: 179232, guid: 4a74117e411b86f4c934cdb11b6d910f, type: 3}
+  sand_bullet_hole: {fileID: 0}
   default_bullet_hole: {fileID: 179232, guid: 0f83f8191f70d3042adfaba12ba04b59, type: 3}
   tags_to_avoid:
   - NoBulletHoles
