@@ -573,16 +573,22 @@ public class GunScript : MonoBehaviour
     private void SpawnShell()
     {
         GameObject new_shell = shells_pool.getNext();
-        new_shell.transform.position = shells_spawn_point.transform.position;
-        new_shell.transform.GetComponent<Rigidbody>().AddForce(transform.right * shells_push_force);
-        new_shell.transform.GetComponent<Rigidbody>().AddForce(transform.up * shells_push_force);
+        if(new_shell != null)
+        {
+            new_shell.transform.position = shells_spawn_point.transform.position;
+            new_shell.transform.GetComponent<Rigidbody>().AddForce(transform.right * shells_push_force);
+            new_shell.transform.GetComponent<Rigidbody>().AddForce(transform.up * shells_push_force);
+        }
     }
 
     private void spawnMagazine()
     {
         GameObject new_magazine = magazines_pool.getNext();
-        new_magazine.transform.position = magazines_spawn_point.transform.position;
-        new_magazine.transform.Rotate(new Vector3(90, 90, 0));
+        if (new_magazine != null)
+        {
+            new_magazine.transform.position = magazines_spawn_point.transform.position;
+            new_magazine.transform.Rotate(new Vector3(90, 90, 0));
+        }
     }
 
 
