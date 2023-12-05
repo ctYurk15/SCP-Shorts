@@ -5729,7 +5729,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2711334969109710402, guid: cc8d9a226d0db8c40925dcbdf32b1a58, type: 3}
-      insertIndex: -1
+      insertIndex: 3
       addedObject: {fileID: 3321993710622218992}
   m_SourcePrefab: {fileID: 100100000, guid: cc8d9a226d0db8c40925dcbdf32b1a58, type: 3}
 --- !u!4 &7086469392597120992 stripped
